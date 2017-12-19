@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.user.library.R;
+import com.example.user.library.activity.LoginActivity;
 
 /**
  * Created by user on 2017-12-19.
@@ -42,17 +43,33 @@ public class ContestQueryActivity extends AppCompatActivity {
 
         //////////////////서버에서 온 데이터를 설정하세요
         //book.setImageResource();
-        bookTitle.setText("해리포터");
+
         number.setText("10034u53o35");
-        stuNumber.setText("1010100034");
-        name.setText("김옥분");
-        major.setText("경영학과");
+        stuNumber.setText(LoginActivity.studentinfo.getStudnet_num());
+        name.setText(LoginActivity.studentinfo.getStudnet_name());
+        major.setText(LoginActivity.studentinfo.getStudent_department());
+
+        if(ContestApplyActivity.str.equals("수학하는 신체")) {
+            book.setImageResource(R.drawable.abook);
+            bookTitle.setText("수학하는 신체");
+        }
+        else if(ContestApplyActivity.str.equals("국가란 무엇인가")){
+            book.setImageResource(R.drawable.bbook);
+            bookTitle.setText("국가란 무엇인가");
+        }
+        else{
+            book.setImageResource(R.mipmap.ic_launcher);
+            bookTitle.setText("");
+        }
         //////////////////////////////////////////////
 
         cancle = (Button)findViewById(R.id.contest_query_cancle);
         cancle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+               // if(selecte.selected.toString().equals(""))
+                //    return;
 
                 LayoutInflater inflater = (LayoutInflater) getApplicationContext().getSystemService(LAYOUT_INFLATER_SERVICE);
                 View mView = inflater.inflate(R.layout.contest_query_dialog, null);
@@ -75,7 +92,9 @@ public class ContestQueryActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         dialog.cancel();
                         //////////서버에서 취소 쿼리를 날리면 되요
-
+                        book.setImageResource(R.mipmap.ic_launcher);
+                        bookTitle.setText("");
+                        ContestApplyActivity.str = "";
                         //////////////////////
                         finish();
                     }
@@ -86,4 +105,5 @@ public class ContestQueryActivity extends AppCompatActivity {
 
 
     }
+
 }

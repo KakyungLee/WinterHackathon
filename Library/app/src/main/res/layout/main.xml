@@ -1,34 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/backblack">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingBottom="3dp">
+        android:paddingBottom="3dp"
+        android:layout_weight="0.1"
+        android:background="@color/colorPrimary"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp">
 
         <EditText
             android:id="@+id/main_search_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="도서를 입력하세요"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:background="@color/color4"
+            android:padding="5dp"/>
 
-        <Button
+        <ImageButton
             android:id="@+id/main_search"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="검색"
-            android:layout_weight="6"/>
+            android:layout_height="50dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/search_icon"
+            android:layout_weight="6"
+            android:layout_gravity="center_vertical"
+            android:backgroundTint="@color/colorPrimary"/>
     </LinearLayout>
 
 
     <android.support.v7.widget.RecyclerView
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:id="@+id/rv">
+        android:id="@+id/rv"
+        android:layout_weight="1">
     </android.support.v7.widget.RecyclerView>
 
 </LinearLayout>

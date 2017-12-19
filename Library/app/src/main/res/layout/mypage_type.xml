@@ -3,7 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp">
 
     <org.eazegraph.lib.charts.ValueLineChart
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -16,7 +19,31 @@
         app:egLegendHeight="40dp"
         app:egShowStandardValue="true"
         app:egUseCubic="true"
-        app:egUseOverlapFill="true"/>
+        app:egUseOverlapFill="true"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="추천 도서"
+        android:textSize="15dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:paddingBottom="3dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"/>
+
+    <GridView
+        android:id="@+id/mypage_type_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="3"
+        android:horizontalSpacing="20dp"
+        android:verticalSpacing="5dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:columnWidth="70dp">
+
+    </GridView>
 
 </LinearLayout>
 
