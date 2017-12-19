@@ -10,5 +10,6 @@
     <color name="color5">#ffd769</color>
     <color name="color6">#746153</color>
     <color name="color7">#55cfed</color>
+    <color name="white">#ffffff</color>
     <color name="backblack">#a5000000</color>
 </resources>

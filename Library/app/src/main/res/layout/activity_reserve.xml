@@ -3,7 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="@color/white">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -15,83 +18,97 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="사용 날짜"
-                android:textSize="20dp" />
+                android:textSize="15dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:background="@color/color4"/>
 
             <DatePicker
                 android:id="@+id/dp"
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
                 android:layout_gravity="center"
                 android:calendarViewShown="false"
                 android:datePickerMode="spinner"></DatePicker>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="이용시간"
-                android:textSize="20dp" />
+                android:textSize="15dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:background="@color/color4"/>
 
             <Spinner
                 android:id="@+id/sp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/back"></Spinner>
+                android:layout_height="40dp"
+                android:paddingLeft="10dp"></Spinner>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="시작시간"
-                android:textSize="20dp" />
+                android:textSize="15dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginTop="10dp"
+                android:background="@color/color4"/>
 
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center">
+                android:layout_gravity="center"
+                >
 
                 <TableRow>
 
                     <TextView
+                        android:id="@+id/n9"
                         android:layout_weight="1"
                         android:background="@drawable/back"
+                        android:clickable="true"
                         android:gravity="center"
                         android:text="9" />
 
                     <TextView
+                        android:id="@+id/n10"
                         android:layout_weight="1"
-
                         android:background="@drawable/back"
+                        android:clickable="true"
                         android:gravity="center"
                         android:text="10" />
 
                     <TextView
-
+                        android:id="@+id/n11"
                         android:layout_weight="1"
                         android:background="@drawable/back"
+                        android:clickable="true"
                         android:gravity="center"
                         android:text="11" />
 
                     <TextView
+                        android:id="@+id/n12"
                         android:layout_weight="1"
                         android:background="@drawable/back"
-
+                        android:clickable="true"
                         android:gravity="center"
                         android:text="12" />
 
                     <TextView
+                        android:id="@+id/n13"
                         android:layout_weight="1"
                         android:background="@drawable/back"
-
+                        android:clickable="true"
                         android:gravity="center"
                         android:text="13" />
 
                     <TextView
+                        android:id="@+id/n14"
                         android:layout_weight="1"
                         android:background="@drawable/back"
-
+                        android:clickable="true"
                         android:gravity="center"
                         android:text="14" />
 
@@ -100,39 +117,149 @@
                 <TableRow>
 
                     <TextView
+                        android:id="@+id/n15"
                         android:layout_weight="1"
                         android:background="@drawable/back"
-
+                        android:clickable="true"
                         android:gravity="center"
                         android:text="15" />
 
                     <TextView
+                        android:id="@+id/n16"
                         android:layout_weight="1"
                         android:background="@drawable/back"
-
+                        android:clickable="true"
                         android:gravity="center"
                         android:text="16" />
 
                     <TextView
+                        android:id="@+id/n17"
                         android:layout_weight="1"
                         android:background="@drawable/back"
-
+                        android:clickable="true"
                         android:gravity="center"
                         android:text="17" />
 
                     <TextView
+                        android:id="@+id/n18"
+                        android:layout_weight="1"
+                        android:background="@drawable/back"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:text="18" />
+
+                    <TextView
+                        android:id="@+id/n19"
+                        android:layout_weight="1"
+                        android:background="@drawable/back"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:text="19" />
+
+                    <TextView
+                        android:id="@+id/n20"
+                        android:layout_weight="1"
+                        android:background="@drawable/back"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:text="20" />
+                </TableRow>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="사용가능한 스터디룸"
+                    android:textSize="15dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/color4"/>
+
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/r1"
+                        android:layout_weight="1"
+                        android:background="@drawable/back"
+                        android:gravity="center"
+                        android:text="1" />
+
+                    <TextView
+                        android:id="@+id/r2"
+                        android:layout_weight="1"
+                        android:background="@drawable/back"
+                        android:gravity="center"
+                        android:text="2" />
+
+                    <TextView
+                        android:id="@+id/r3"
+                        android:layout_weight="1"
+                        android:background="@drawable/back"
+                        android:gravity="center"
+                        android:text="3" />
+
+                    <TextView
+                        android:id="@+id/r4"
+                        android:layout_weight="1"
+                        android:background="@drawable/back"
+                        android:gravity="center"
+                        android:text="4" />
+
+                    <TextView
+                        android:id="@+id/r5"
+                        android:layout_weight="1"
+                        android:background="@drawable/back"
+                        android:gravity="center"
+                        android:text="5" />
+
+                    <TextView
+                        android:id="@+id/r6"
+                        android:layout_weight="1"
+                        android:background="@drawable/back"
+                        android:gravity="center"
+                        android:text="6" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/r15"
+                        android:layout_weight="1"
+                        android:background="@drawable/back"
+                        android:gravity="center"
+                        android:text="15" />
+
+                    <TextView
+                        android:id="@+id/r16"
+                        android:layout_weight="1"
+                        android:background="@drawable/back"
+                        android:gravity="center"
+                        android:text="16" />
+
+                    <TextView
+                        android:id="@+id/r17"
+                        android:layout_weight="1"
+                        android:background="@drawable/back"
+                        android:gravity="center"
+                        android:text="17" />
+
+                    <TextView
+                        android:id="@+id/r18"
                         android:layout_weight="1"
                         android:background="@drawable/back"
                         android:gravity="center"
                         android:text="18" />
 
                     <TextView
+                        android:id="@+id/r19"
                         android:layout_weight="1"
                         android:background="@drawable/back"
                         android:gravity="center"
                         android:text="19" />
 
                     <TextView
+                        android:id="@+id/r20"
                         android:layout_weight="1"
                         android:background="@drawable/back"
                         android:gravity="center"
@@ -141,91 +268,90 @@
 
             </TableLayout>
 
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="year mon day" />
+                android:text="이용자 등록"
+                android:textSize="15dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:background="@color/color4"
+                android:layout_marginTop="10dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
+                android:orientation="vertical"
+                android:padding="3dp">
 
-                <EditText
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:hint="name" />
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
 
-                <EditText
-                    android:layout_width="wrap_content"
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="name" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:hint="number" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:hint="number" />
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
 
-                <Button
-                    android:layout_width="wrap_content"
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="name" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:hint="number" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="조회" />
-            </LinearLayout>
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="name" />
 
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:hint="name" />
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:hint="number" />
 
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:hint="number" />
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="조회" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
-
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:hint="name" />
-
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:hint="number" />
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="조회" />
+                </LinearLayout>
             </LinearLayout>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="reservation" />
+                android:text="reservation"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/color4"
+                android:layout_marginTop="10dp"/>
         </LinearLayout>
     </ScrollView>
 
