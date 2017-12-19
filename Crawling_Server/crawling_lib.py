@@ -136,11 +136,65 @@ def search(word, page):
     return dic
 
 
+def get_favbooks():
+    lst = []
+
+    # image
+    url = 'http://library.sejong.ac.kr'
+    source_code = requests.get(url+'/index.ax', allow_redirects=False)
+    plain_text = source_code.text
+    soup = BeautifulSoup(plain_text, 'html.parser')
+
+    div = soup.findAll('div', {'class': 'favbooks'})[0]
+    aa = div.findAll('a')
+
+    for d in range(len(list(aa))-1):
+        dic = {}
+        a = str(aa[d])
+
+        tmp = 'herf='
+        x = a.find(tmp)
+        a = a[x+len(tmp):]
+        tmp = 'cid='
+        x = a.find(tmp)
+        a = a[x+len(tmp):]
+        tmp = '">'
+        x = a.find(tmp)
+        dic['BOOK_NUM'] = int(a[:x])
+        a = a[x:]
+
+        print(a)
+        tmp = 'alt="'
+        x = a.find(tmp)
+        a = a[x+len(tmp):]
+        tmp = '"'
+        x = a.find(tmp)
+        dic['BOOK_NAME'] = a[:x]
+        
+        tmp = "src=\""
+        x = a.find(tmp)
+        a = a[x+len(tmp):]
+        tmp = "\""
+        x = a.find(tmp)
+        if "http://" in a[:x]:
+            dic['BOOK_IMGURL'] = a[:x]
+        else:
+            dic['BOOK_IMGURL'] = url + a[:x]
+
+        dic['BOOK_INFO'] = 'None'
+        dic['BOOK_CODE'] = 'None'
+        dic['BOOK_STATUS'] = 'None'
+        
+        lst.append(dic)
+    
+        
+    return lst
 
 if __name__ == "__main__":
-    dic = search("Web", 1)
-    lst = dic['data']
-    print("max_page =", dic['max_page'], ", next =", dic['next'])
+#    dic = search("Web", 1)
+#    lst = dic['data']
+    lst = get_favbooks()
+#    print("max_page =", dic['max_page'], ", next =", dic['next'])
     for i in range(len(lst)):
         x = lst[i]
         print("#"*10 + " No. " + str(i+1) + " " + "#"*10)
