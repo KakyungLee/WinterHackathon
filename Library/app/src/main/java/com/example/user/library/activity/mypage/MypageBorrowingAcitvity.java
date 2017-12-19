@@ -1,18 +1,19 @@
-package com.example.user.library.activity;
+package com.example.user.library.activity.mypage;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+
 import com.example.user.library.R;
 
 /**
  * Created by user on 2017-12-19.
  */
 
-public class MainActivity extends Activity{
+public class MypageBorrowingAcitvity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.mypage_borrowing);
     }
 }

@@ -16,7 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.main.MainActivity" />
+        <activity android:name=".activity.mypage.MypageActivity" />
+        <activity android:name=".activity.studyroom.StudyroomActivity" />
+        <activity android:name=".activity.contest.ContestActivity" />
+        <activity android:name=".activity.mypage.MypageBorrowedActivity" />
     </application>
 
 </manifest>
