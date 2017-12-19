@@ -1,37 +1,50 @@
-## INPUT
-http://server.url/search/<str:°Ë»ö¾î>/<int:Çö ÆäÀÌÁö>
+## 01. Searching Books
+### INPUT
+http://52.39.242.174:5000/search/<str:ê²€ìƒ‰ì–´>/<int:í˜„ í˜ì´ì§€>
 
-## OUTPUT
-{
-    'word': '(°Ë»ö¾î)',
-    'page': (Çö ÆäÀÌÁö),
-    'max_page': (³¡ ÆäÀÌÁö),
-    'next': (True/False: ´ÙÀ½ ÆäÀÌÁö °¡´É ¿©ºÎ),
-    'data': [
-        {
-            'BOOK_NUM': (¿øº»ÆäÀÌÁö DB¿¡¼­ÀÇ Ã¥ ¹øÈ£).
-            'BOOK_NAME': '(µµ¼­¸í)'.
-            'BOOK_INFO': '(ÀúÀÚ, ÃâÆÇ»ç, ¿¬µµ)'.
-            'BOOK_CODE': '(Ã»±¸±âÈ£)'.
-            'BOOK_STATUS': '(µµ¼­»óÅÂ: ´ëÃâ°¡´É, ´ëÃâºÒ°¡, Æó±â´ë»ó)'.
-            'BOOK_IMGURL': '(µµ¼­Ç¥ÁöÀÌ¹ÌÁö ¸µÅ©)'.
-        },
-        {
-            'BOOK_NUM': (¿øº»ÆäÀÌÁö DB¿¡¼­ÀÇ Ã¥ ¹øÈ£).
-            'BOOK_NAME': '(µµ¼­¸í)'.
-            'BOOK_INFO': '(ÀúÀÚ, ÃâÆÇ»ç, ¿¬µµ)'.
-            'BOOK_CODE': '(Ã»±¸±âÈ£)'.
-            'BOOK_STATUS': '(µµ¼­»óÅÂ: ´ëÃâ°¡´É, ´ëÃâºÒ°¡, Æó±â´ë»ó)'.
-            'BOOK_IMGURL': '(µµ¼­Ç¥ÁöÀÌ¹ÌÁö ¸µÅ©)'.
-        },
-        {
-            'BOOK_NUM': (¿øº»ÆäÀÌÁö DB¿¡¼­ÀÇ Ã¥ ¹øÈ£).
-            'BOOK_NAME': '(µµ¼­¸í)'.
-            'BOOK_INFO': '(ÀúÀÚ, ÃâÆÇ»ç, ¿¬µµ)'.
-            'BOOK_CODE': '(Ã»±¸±âÈ£)'.
-            'BOOK_STATUS': '(µµ¼­»óÅÂ: ´ëÃâ°¡´É, ´ëÃâºÒ°¡, Æó±â´ë»ó)'.
-            'BOOK_IMGURL': '(µµ¼­Ç¥ÁöÀÌ¹ÌÁö ¸µÅ©)'.
-        },
-        ...(»ı·«)
-    ]
-}
+### OUTPUT
+{</br>
+&nbsp;&nbsp;&nbsp;&nbsp;'word': '(ê²€ìƒ‰ì–´)',</br>
+&nbsp;&nbsp;&nbsp;&nbsp;'page': (í˜„ í˜ì´ì§€),</br>
+&nbsp;&nbsp;&nbsp;&nbsp;'max_page': (ë í˜ì´ì§€),</br>
+&nbsp;&nbsp;&nbsp;&nbsp;'next': (True/False: ë‹¤ìŒ í˜ì´ì§€ ê°€ëŠ¥ ì—¬ë¶€),</br>
+&nbsp;&nbsp;&nbsp;&nbsp;'data': [</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'BOOK_NUM': (ì›ë³¸í˜ì´ì§€ DBì—ì„œì˜ ì±… ë²ˆí˜¸).</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'BOOK_NAME': '(ë„ì„œëª…)'.</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'BOOK_INFO': '(ì €ì, ì¶œíŒì‚¬, ì—°ë„)'.</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'BOOK_CODE': '(ì²­êµ¬ê¸°í˜¸)'.</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'BOOK_STATUS': '(ë„ì„œìƒíƒœ: ëŒ€ì¶œê°€ëŠ¥, ëŒ€ì¶œë¶ˆê°€, íê¸°ëŒ€ìƒ)'.</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'BOOK_IMGURL': '(ë„ì„œí‘œì§€ì´ë¯¸ì§€ ë§í¬)'.</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'BOOK_NUM': (ì›ë³¸í˜ì´ì§€ DBì—ì„œì˜ ì±… ë²ˆí˜¸).</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'BOOK_NAME': '(ë„ì„œëª…)'.</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'BOOK_INFO': '(ì €ì, ì¶œíŒì‚¬, ì—°ë„)'.</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'BOOK_CODE': '(ì²­êµ¬ê¸°í˜¸)'.</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'BOOK_STATUS': '(ë„ì„œìƒíƒœ: ëŒ€ì¶œê°€ëŠ¥, ëŒ€ì¶œë¶ˆê°€, íê¸°ëŒ€ìƒ)'.</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'BOOK_IMGURL': '(ë„ì„œí‘œì§€ì´ë¯¸ì§€ ë§í¬)'.</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'BOOK_NUM': (ì›ë³¸í˜ì´ì§€ DBì—ì„œì˜ ì±… ë²ˆí˜¸).</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'BOOK_NAME': '(ë„ì„œëª…)'.</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'BOOK_INFO': '(ì €ì, ì¶œíŒì‚¬, ì—°ë„)'.</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'BOOK_CODE': '(ì²­êµ¬ê¸°í˜¸)'.</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'BOOK_STATUS': '(ë„ì„œìƒíƒœ: ëŒ€ì¶œê°€ëŠ¥, ëŒ€ì¶œë¶ˆê°€, íê¸°ëŒ€ìƒ)'.</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'BOOK_IMGURL': '(ë„ì„œí‘œì§€ì´ë¯¸ì§€ ë§í¬)'.</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'BOOK_NUM': (ì›ë³¸í˜ì´ì§€ DBì—ì„œì˜ ì±… ë²ˆí˜¸).</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'BOOK_NAME': '(ë„ì„œëª…)'.</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'BOOK_INFO': '(ì €ì, ì¶œíŒì‚¬, ì—°ë„)'.</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'BOOK_CODE': '(ì²­êµ¬ê¸°í˜¸)'.</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'BOOK_STATUS': '(ë„ì„œìƒíƒœ: ëŒ€ì¶œê°€ëŠ¥, ëŒ€ì¶œë¶ˆê°€, íê¸°ëŒ€ìƒ)'.</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'BOOK_IMGURL': '(ë„ì„œí‘œì§€ì´ë¯¸ì§€ ë§í¬)'.</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...(ìƒëµ)</br>
+&nbsp;&nbsp;&nbsp;&nbsp;]</br>
+}</br>
+
+## 02. (Coming Soon...)
+### INPUT
+### OUTPUT
