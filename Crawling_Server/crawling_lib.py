@@ -106,10 +106,10 @@ def search(word, page):
         a = pager.findAll('a')
         if len(list(a)) > 0:
             b = str(a[len(list(a))-1])
-            tmp = "goPage("
+            tmp = ">"
             x = b.find(tmp)
             b = b[x+len(tmp):]
-            tmp = ");"
+            tmp = "</a>"
             x = b.find(tmp)
             dic['max_page'] = int(b[:x])
         else:
@@ -191,10 +191,10 @@ def get_favbooks():
     return lst
 
 if __name__ == "__main__":
-#    dic = search("Web", 1)
-#    lst = dic['data']
-    lst = get_favbooks()
-#    print("max_page =", dic['max_page'], ", next =", dic['next'])
+    dic = search("夏目漱石", 1)
+    lst = dic['data']
+#    lst = get_favbooks()
+    print("max_page =", dic['max_page'], ", next =", dic['next'])
     for i in range(len(lst)):
         x = lst[i]
         print("#"*10 + " No. " + str(i+1) + " " + "#"*10)

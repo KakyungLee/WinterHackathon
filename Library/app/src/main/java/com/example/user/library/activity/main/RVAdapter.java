@@ -13,7 +13,7 @@ import android.widget.TextView;
 import com.example.user.library.R;
 import com.example.user.library.activity.contest.ContestActivity;
 import com.example.user.library.activity.mypage.MypageActivity;
-import com.example.user.library.activity.studyroom.StudyroomActivity;
+import com.example.user.library.activity.studyroom.StudyRoom;
 
 import java.util.List;
 
@@ -56,7 +56,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.MenuViewHolder> {
         }
 
         public void startStudyRoom(){
-            Intent intent = new Intent(mcontext, StudyroomActivity.class);
+            Intent intent = new Intent(mcontext, StudyRoom.class);
             mcontext.startActivity(intent);
         }
         public void startContest(){

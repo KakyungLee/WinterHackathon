@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="사용 날짜"
+                android:textSize="20dp" />
+
+            <DatePicker
+                android:id="@+id/dp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"></DatePicker>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이용시간"
+                android:textSize="20dp" />
+
+            <Spinner
+                android:id="@+id/sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back"></Spinner>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="시작시간"
+                android:textSize="20dp" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:background="@drawable/back"
+                        android:gravity="center"
+                        android:text="9" />
+
+                    <TextView
+                        android:layout_weight="1"
+
+                        android:background="@drawable/back"
+                        android:gravity="center"
+                        android:text="10" />
+
+                    <TextView
+
+                        android:layout_weight="1"
+                        android:background="@drawable/back"
+                        android:gravity="center"
+                        android:text="11" />
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:background="@drawable/back"
+
+                        android:gravity="center"
+                        android:text="12" />
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:background="@drawable/back"
+
+                        android:gravity="center"
+                        android:text="13" />
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:background="@drawable/back"
+
+                        android:gravity="center"
+                        android:text="14" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:background="@drawable/back"
+
+                        android:gravity="center"
+                        android:text="15" />
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:background="@drawable/back"
+
+                        android:gravity="center"
+                        android:text="16" />
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:background="@drawable/back"
+
+                        android:gravity="center"
+                        android:text="17" />
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:background="@drawable/back"
+                        android:gravity="center"
+                        android:text="18" />
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:background="@drawable/back"
+                        android:gravity="center"
+                        android:text="19" />
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:background="@drawable/back"
+                        android:gravity="center"
+                        android:text="20" />
+                </TableRow>
+
+            </TableLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="year mon day" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:hint="name" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:hint="number" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="조회" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:hint="name" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:hint="number" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="조회" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:hint="name" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:hint="number" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="조회" />
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="reservation" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+
