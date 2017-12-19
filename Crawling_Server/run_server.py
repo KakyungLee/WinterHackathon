@@ -31,5 +31,5 @@ def root():
 
 if __name__ == "__main__":
     app.debug = True
-#    app.run(host="172.31.44.210", threaded=True)
-    app.run(threaded=True)
+    app.run(host="172.31.44.210", threaded=True)
+#    app.run(threaded=True)
