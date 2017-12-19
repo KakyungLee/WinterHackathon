@@ -30,16 +30,16 @@ public class ContestHistoryActivity extends AppCompatActivity {
         String type ="contest";
         ListViewAdapter.addItem(
                 type,
-                getResources().getDrawable(R.drawable.image_mypage, null),
-                "해리포터_불사조기사단",
+                getResources().getDrawable(R.drawable.cbook, null),
+                "가치관의 탄생",
                 "2016_12_30",
                 null,
                 null);
 
         ListViewAdapter.addItem(
                 type,
-                getResources().getDrawable(R.drawable.image_mypage, null),
-                "해리포터_죽음의 성물",
+                getResources().getDrawable(R.drawable.dbook, null),
+                "현실주의자의 심리학 산책",
                 "2016_11_30",
                 null,
                 null);

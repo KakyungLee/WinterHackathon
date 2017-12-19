@@ -22,7 +22,8 @@ public class ContestApplyActivity extends AppCompatActivity {
     private ImageButton bBook;
     private CheckBox agreeCheck;
     private Button submit;
-    private TextView selected;
+    public  TextView selected ;
+    public static String str = "";
     private String a = "수학하는 신체";
     private String b ="국가란 무엇인가";
 
@@ -41,6 +42,7 @@ public class ContestApplyActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 selected.setText(a);
+                str = a;
             }
         });
 
@@ -50,6 +52,7 @@ public class ContestApplyActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 selected.setText(b);
+                str = b;
             }
         });
 

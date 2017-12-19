@@ -15,7 +15,8 @@
             android:id="@+id/contest_query_book"
             android:layout_width="150dp"
             android:layout_height="200dp"
-            android:src="@mipmap/ic_launcher"/>
+            android:src="@mipmap/ic_launcher"
+            android:scaleType="fitXY"/>
 
         <TextView
             android:id="@+id/contest_query_booktitle"
