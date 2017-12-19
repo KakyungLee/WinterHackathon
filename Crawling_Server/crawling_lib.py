@@ -91,10 +91,33 @@ def search(word, page):
 
     dic = {}
     
-    pager = soup.findAll('div', {'class': 'pager'})[0]
+    pager = soup.findAll('div', {'class': 'pager'})
+    if len(list(pager)) == 0:
+        dic['data'] = []
+        dic['max_page'] = 0
+        dic['next'] = False
+        return dic
+    
+    pager = pager[0]
+    
     a = pager.findAll('a', {'class': 'next'})
     if len(list(a)) < 2:
         dic['next'] = False
+        a = pager.findAll('a')
+        if len(list(a)) > 0:
+            b = str(a[len(list(a))-1])
+            tmp = "goPage("
+            x = b.find(tmp)
+            b = b[x+len(tmp):]
+            tmp = ");"
+            x = b.find(tmp)
+            dic['max_page'] = int(b[:x])
+        else:
+            a = pager.findAll('strong')
+            if len(list(a)) == 0:
+                dic['max_page'] = 0
+            else:
+                dic['max_page'] = 1
     else:
         b = str(a[1])
         tmp = "goPage("
@@ -103,8 +126,12 @@ def search(word, page):
         tmp = ");"
         x = b.find(tmp)
         dic['max_page'] = int(b[:x])
-        dic['next'] = (page < dic['max_page'])
-    dic['data'] = get_item(soup, prefix)
+    dic['next'] = (page < dic['max_page'])
+
+    if dic['max_page'] == 0:
+        dic['data'] = []
+    else:
+        dic['data'] = get_item(soup, prefix)
     
     return dic
 
