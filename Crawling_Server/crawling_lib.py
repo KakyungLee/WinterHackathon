@@ -5,8 +5,9 @@ import sys
 
 def exchangeStr(src, before, after):
     x = src.find(before)
-    if x != -1:
+    while x != -1:
         src = src[:x] + after + src[x+len(before):]
+        x = src.find(before)
     return src
 
 
@@ -33,7 +34,8 @@ def get_item(soup, url):
         a = a[x+len(tmp):]
         tmp = "</a>"
         x = a.find(tmp)
-        dic['BOOK_NAME'] = exchangeStr(a[:x], "&amp;", "&")
+        b = exchangeStr(a[:x], "&amp;", "&")
+        dic['BOOK_NAME'] = exchangeStr(b, "\'", "")
 
         a = str(i)
         tmp = "<img "
