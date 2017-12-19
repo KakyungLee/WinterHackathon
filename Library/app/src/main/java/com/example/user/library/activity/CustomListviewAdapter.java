@@ -40,8 +40,9 @@ public class CustomListviewAdapter extends BaseAdapter {
         return position;
     }
 
-    public void addItem(Drawable cusImage, String cusFirst,String cusSecond, String cusThird, String cusButton){
+    public void addItem(String cusType, Drawable cusImage, String cusFirst,String cusSecond, String cusThird, String cusButton){
         addInfo = new CustomItem();
+        addInfo.cusType = cusType;
         addInfo.cusImage = cusImage;
         addInfo.cusFirst = cusFirst;
         addInfo.cusSecond = cusSecond;
@@ -51,6 +52,7 @@ public class CustomListviewAdapter extends BaseAdapter {
     }
 
     private class ViewHolder{
+        public String cusType;
         public ImageView cusImage;
         public TextView cusFirst;
         public TextView cusSecond;
@@ -90,13 +92,30 @@ public class CustomListviewAdapter extends BaseAdapter {
 
         CustomItem allMenuData = allMenuListData.get(position);
 
-        if(allMenuData.cusButton != null){
-            cusData.cusButton.setVisibility(View.VISIBLE);
-            cusData.cusButton.setText("삭제");
+        switch (allMenuData.cusType){
+            case "contest" :
+                if(allMenuData.cusButton != null){
+                    cusData.cusButton.setVisibility(View.VISIBLE);
+                    cusData.cusButton.setText("삭제");
+                }
+                else{
+                    cusData.cusButton.setVisibility(View.GONE);
+                }
+                break;
+            case "borrowed":
+                cusData.cusButton.setVisibility(View.VISIBLE);
+                if(allMenuData.cusButton != null){
+                    cusData.cusButton.setText("수정");
+                }
+                else{
+                    cusData.cusButton.setText("작성");
+                }
+                break;
+            case "borrowing":
+                break;
         }
-        else{
-            cusData.cusButton.setVisibility(View.GONE);
-        }
+
+
         cusData.cusImage.setVisibility(View.VISIBLE);
         cusData.cusImage.setImageDrawable(allMenuData.cusImage);
         cusData.cusFirst.setText(allMenuData.cusFirst);

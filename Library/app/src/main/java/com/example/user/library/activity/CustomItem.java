@@ -7,6 +7,7 @@ import android.graphics.drawable.Drawable;
  */
 
 public class CustomItem {
+    public String cusType;
     public Drawable cusImage;
     public String cusFirst;
     public String cusSecond;

@@ -26,15 +26,20 @@ public class MypageBorrowedActivity extends AppCompatActivity {
         MenuList.setAdapter(ListViewAdapter);
 
         ///// 테스트 데이터 입니다 서버에서 데이터를 넣어주시면 되요
-        ListViewAdapter.addItem(getResources().getDrawable(R.drawable.image_mypage, null),
+        String type ="borrowed";
+        ListViewAdapter.addItem(
+                type,
+                getResources().getDrawable(R.drawable.image_mypage, null),
                 "해리포터_불사조기사단",
-                "2016_12_30",
-                null,
+                "대출일:"+"2016_12_30",
+                "모래뿐일 것이다 이상의 꽃이 없으면 쓸쓸한 인간에 남는",
                 null);
 
-        ListViewAdapter.addItem(getResources().getDrawable(R.drawable.image_mypage, null),
+        ListViewAdapter.addItem(
+                type,
+                getResources().getDrawable(R.drawable.image_mypage, null),
                 "해리포터_죽음의 성물",
-                "2016_11_30",
+                "대출일:"+"2016_11_30",
                 null,
                 null);
         /////////////////////////////////////////////////////////////////////

@@ -27,13 +27,18 @@ public class ContestHistoryActivity extends AppCompatActivity {
         MenuList.setAdapter(ListViewAdapter);
 
         ///// 테스트 데이터 입니다 서버에서 데이터를 넣어주시면 되요
-        ListViewAdapter.addItem(getResources().getDrawable(R.drawable.image_mypage, null),
+        String type ="contest";
+        ListViewAdapter.addItem(
+                type,
+                getResources().getDrawable(R.drawable.image_mypage, null),
                 "해리포터_불사조기사단",
                 "2016_12_30",
                 null,
                 null);
 
-        ListViewAdapter.addItem(getResources().getDrawable(R.drawable.image_mypage, null),
+        ListViewAdapter.addItem(
+                type,
+                getResources().getDrawable(R.drawable.image_mypage, null),
                 "해리포터_죽음의 성물",
                 "2016_11_30",
                 null,
