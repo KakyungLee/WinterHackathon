@@ -2,6 +2,7 @@ package com.example.user.library.activity;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -10,7 +11,15 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.user.library.R;
+import com.example.user.library.activity.dto.Student_info_dto;
 import com.example.user.library.activity.main.MainActivity;
+import com.example.user.library.activity.serviceinterface.LoginInfo;
+import com.example.user.library.activity.util.ServiceRetrofit;
+
+import java.io.IOException;
+
+import retrofit2.Call;
+import retrofit2.Response;
 
 /**
  * Created by user on 2017-12-19.
@@ -22,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText password;
     private Button login;
     private Button moveLibrary;
-
+    public static Student_info_dto studentinfo=null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +49,11 @@ public class LoginActivity extends AppCompatActivity {
                 String strPassword = password.getText().toString();
                 Toast.makeText(getApplicationContext(), strId+ " "+ strPassword, Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                LoginInfo login= ServiceRetrofit.getInstance().getRetrofit().create(LoginInfo.class);
+                Call<Student_info_dto> call = login.loginInfo(strId,strPassword);
+                new LoginProcess().execute(call);
                 startActivity(intent);
+
             }
         });
 
@@ -52,7 +65,22 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-
+    private class LoginProcess extends AsyncTask<Call, Void, Student_info_dto> {
+        protected Student_info_dto doInBackground(Call... params){
+            try{
+                Call<Student_info_dto> call=params[0];
+                Response<Student_info_dto> response = call.execute();
+                return response.body();
+            }catch(IOException e){
+                e.printStackTrace();
+            }
+            return null;
+        }
+        protected void onPostExecute(Student_info_dto result) {
+             studentinfo = result;
+            System.out.println(studentinfo.getStudnet_num());
+        }
+    }
 
 
 }
