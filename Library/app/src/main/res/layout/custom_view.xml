@@ -42,9 +42,11 @@
         <Button
             android:id="@+id/custom_button"
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
+            android:layout_height="wrap_content"
             android:text="수정"
-            android:layout_gravity="right"/>
+            android:layout_gravity="right"
+            android:textColor="@color/color2"
+            android:backgroundTint="#ffffff"/>
 
     </LinearLayout>
 

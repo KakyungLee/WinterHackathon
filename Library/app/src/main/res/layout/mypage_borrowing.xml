@@ -3,6 +3,15 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="대출 현황"
+        android:textSize="12dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:paddingBottom="3dp"
+        android:paddingLeft="15dp"/>
+
     <ListView
         android:id="@+id/mypage_borrowing_listview"
         android:layout_width="match_parent"
@@ -13,7 +22,19 @@
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:layout_centerInParent="true"
-        android:background="#FF0000"/>
+        android:background="@color/backblack"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="예약 현황"
+        android:textSize="12dp"
+        android:textColor="@color/color2"
+        android:paddingBottom="3dp"
+        android:paddingLeft="15dp"/>
+
 
     <ListView
         android:id="@+id/mypage_reservation_listview"
