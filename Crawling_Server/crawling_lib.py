@@ -175,7 +175,7 @@ def get_favbooks():
         a = a[x+len(tmp):]
         tmp = '"'
         x = a.find(tmp)
-        dic['BOOK_NAME'] = a[:x]
+        dic['BOOK_NAME'] = exchangeStr(a[:x], "\'", "")
         
         tmp = "src=\""
         x = a.find(tmp)

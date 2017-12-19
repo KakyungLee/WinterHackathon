@@ -21,7 +21,7 @@ def search_result(word, page):
 
 @app.route("/favbooks")
 def favbooks_result():
-    return str(get_favbooks())
+    return exchangeStr(str(get_favbooks()), "\'", "\"")
 
 @app.route("/")
 def root():
