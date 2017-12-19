@@ -9,6 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.user.library.R;
 
@@ -76,14 +77,6 @@ public class CustomListviewAdapter extends BaseAdapter {
             cusData.cusThird = (TextView)convertView.findViewById(R.id.custom_third);
             cusData.cusButton = (Button) convertView.findViewById(R.id.custom_button);
 
-            cusData.cusButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    //Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                    //startActivity(intent);
-                }
-            });
-
             convertView.setTag(cusData);
         }
         else{
@@ -97,6 +90,12 @@ public class CustomListviewAdapter extends BaseAdapter {
                 if(allMenuData.cusButton != null){
                     cusData.cusButton.setVisibility(View.VISIBLE);
                     cusData.cusButton.setText("삭제");
+                    cusData.cusButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Toast.makeText(view.getContext(), "삭제", Toast.LENGTH_LONG).show();
+                        }
+                    });
                 }
                 else{
                     cusData.cusButton.setVisibility(View.GONE);
@@ -106,16 +105,68 @@ public class CustomListviewAdapter extends BaseAdapter {
                 cusData.cusButton.setVisibility(View.VISIBLE);
                 if(allMenuData.cusThird != null){
                     cusData.cusButton.setText("수정");
+                    cusData.cusButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                          /*  LayoutInflater inflater = (LayoutInflater) view.getApplicationContext().getSystemService(LAYOUT_INFLATER_SERVICE);
+                            View mView = inflater.inflate(R.layout.contest_modify_dialog, null);
+                            AlertDialog.Builder builder = new AlertDialog.Builder(ContestApplyActivity.this);
+                            builder.setView(mView);
+                            final AlertDialog dialog = builder.create();
+                            dialog.show();
+
+                            Button ok = (Button) mView.findViewById(R.id.contest_modify_dialog_ok);
+                            ok.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+
+                                    dialog.cancel();
+                                }
+                            });*/
+                        }
+                    });
                 }
                 else{
                     cusData.cusButton.setText("작성");
+                    cusData.cusButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            /*  LayoutInflater inflater = (LayoutInflater) view.getApplicationContext().getSystemService(LAYOUT_INFLATER_SERVICE);
+                            View mView = inflater.inflate(R.layout.contest_modify_dialog, null);
+                            AlertDialog.Builder builder = new AlertDialog.Builder(ContestApplyActivity.this);
+                            builder.setView(mView);
+                            final AlertDialog dialog = builder.create();
+                            dialog.show();
+
+                            Button ok = (Button) mView.findViewById(R.id.contest_modify_dialog_ok);
+                            ok.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+
+                                    dialog.cancel();
+                                }
+                            });*/
+                        }
+                    });
                 }
                 break;
             case "borrowing":
                 cusData.cusButton.setText("연장");
+                cusData.cusButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Toast.makeText(view.getContext(), "연장", Toast.LENGTH_LONG).show();
+                    }
+                });
                 break;
             case "reservation":
                 cusData.cusButton.setText("취소");
+                cusData.cusButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Toast.makeText(view.getContext(), "취소", Toast.LENGTH_LONG).show();
+                    }
+                });
                 break;
         }
 
