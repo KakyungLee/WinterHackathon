@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, session, url_for, redirect
-from crawling_lib import search
+from crawling_lib import search, get_favbooks
 
 app = Flask(__name__)
 
@@ -19,6 +19,10 @@ def search_result(word, page):
     
     return s
 
+@app.route("/favbooks")
+def favbooks_result():
+    return str(get_favbooks())
+
 @app.route("/")
 def root():
     return "Hello, Flask!"
@@ -28,3 +32,4 @@ def root():
 if __name__ == "__main__":
     app.debug = True
     app.run(host="172.31.44.210", threaded=True)
+#    app.run(threaded=True)
