@@ -1,6 +1,7 @@
 package com.example.user.library.activity.main;
 
 import android.app.Activity;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -10,9 +11,18 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.user.library.R;
+import com.example.user.library.activity.dto.Book_dto;
+import com.example.user.library.activity.dto.Book_search_list_dto;
+import com.example.user.library.activity.dto.Student_info_dto;
+import com.example.user.library.activity.serviceinterface.BookSearch;
+import com.example.user.library.activity.util.ServiceCrawlingRetrofit;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Response;
 
 /**
  * Created by user on 2017-12-19.
@@ -40,8 +50,20 @@ public class MainActivity extends Activity {
                 String str = searchText.getText().toString();
                 if(str == null)
                     return;
-                else
-                    Toast.makeText(getApplicationContext(), str+" 검색을 합니다.", Toast.LENGTH_LONG).show();
+                else {
+                    Toast.makeText(getApplicationContext(), str + " 검색을 합니다.", Toast.LENGTH_LONG).show();
+/*
+                LoginInfo login= ServiceRetrofit.getInstance().getRetrofit().create(LoginInfo.class);
+                Call<Student_info_dto> call = login.loginInfo(strId,strPassword);
+                new LoginProcess().execute(call);
+                startActivity(intent);
+
+*/
+               // BookSearch search= ServiceCrawlingRetrofit.getInstance().getRetrofit().create(BookSearch.class);
+              //      Call<Book_search_list_dto> call =search.bookSearch(str);
+              //      new BookSearchProcess().execute(call);
+
+                }
             }
         });
 
@@ -64,4 +86,24 @@ public class MainActivity extends Activity {
         RVAdapter adapter = new RVAdapter(getApplicationContext(),menus);
         rv.setAdapter(adapter);
     }
+
+    private class BookSearchProcess extends AsyncTask<Call, Void, Book_search_list_dto> {
+        protected Book_search_list_dto doInBackground(Call... params){
+            try{
+                Call<Book_search_list_dto> call=params[0];
+                Response<Book_search_list_dto> response = call.execute();
+                return response.body();
+            }catch(IOException e){
+                e.printStackTrace();
+            }
+            return null;
+        }
+        protected void onPostExecute(Book_search_list_dto result) {
+            System.out.println(result.max_page+"."+result.next+","+result.word+","+result.data.size());
+            for(Book_dto temp : result.data){
+                System.out.println(temp.getBook_name());
+            }
+        }
+    }
+
 }

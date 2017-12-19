@@ -3,9 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Library.iml" filepath="$PROJECT_DIR$/Library.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../../../mooka/Desktop/test/WinterHackathon/Library/Library.iml" filepath="$PROJECT_DIR$/../../../../mooka/Desktop/test/WinterHackathon/Library/Library.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../../../mooka/Desktop/test/WinterHackathon/Library/app/app.iml" filepath="$PROJECT_DIR$/../../../../mooka/Desktop/test/WinterHackathon/Library/app/app.iml" />
     </modules>
   </component>
 </project>
