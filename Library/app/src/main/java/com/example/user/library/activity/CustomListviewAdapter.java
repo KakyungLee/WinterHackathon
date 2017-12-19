@@ -104,7 +104,7 @@ public class CustomListviewAdapter extends BaseAdapter {
                 break;
             case "borrowed":
                 cusData.cusButton.setVisibility(View.VISIBLE);
-                if(allMenuData.cusButton != null){
+                if(allMenuData.cusThird != null){
                     cusData.cusButton.setText("수정");
                 }
                 else{
@@ -112,6 +112,10 @@ public class CustomListviewAdapter extends BaseAdapter {
                 }
                 break;
             case "borrowing":
+                cusData.cusButton.setText("연장");
+                break;
+            case "reservation":
+                cusData.cusButton.setText("취소");
                 break;
         }
 
