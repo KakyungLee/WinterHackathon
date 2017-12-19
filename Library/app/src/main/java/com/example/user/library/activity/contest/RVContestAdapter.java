@@ -58,11 +58,11 @@ public class RVContestAdapter extends RecyclerView.Adapter<RVContestAdapter.Menu
             mcontext.startActivity(intent);
         }
         public void startHistory(){
-            Intent intent = new Intent(mcontext, ContestHistoryActivity.class);
+            Intent intent = new Intent(mcontext, ContestQueryActivity.class);
             mcontext.startActivity(intent);
         }
         public void startQuery(){
-            Intent intent = new Intent(mcontext, ContestQueryActivity.class);
+            Intent intent = new Intent(mcontext, ContestHistoryActivity.class);
             mcontext.startActivity(intent);
         }
 
