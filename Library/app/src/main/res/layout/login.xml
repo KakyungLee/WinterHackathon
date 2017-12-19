@@ -21,6 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="학번"
+            android:text="15010973"
             android:textColor="@color/color4"
             android:textColorHint="@color/color4"
             android:layout_marginTop="140dp"/>
@@ -31,6 +32,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:hint="비밀번호"
+            android:text="1234"
             android:textColor="@color/color4"
             android:textColorHint="@color/color4"/>
 

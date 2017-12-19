@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.user.library.R;
+import com.example.user.library.activity.LoginActivity;
 
 /**
  * Created by user on 2017-12-19.
@@ -43,29 +44,22 @@ public class ContestQueryActivity extends AppCompatActivity {
         //////////////////서버에서 온 데이터를 설정하세요
         //book.setImageResource();
 
+        number.setText("10034u53o35");
+        stuNumber.setText(LoginActivity.studentinfo.getStudnet_num());
+        name.setText(LoginActivity.studentinfo.getStudnet_name());
+        major.setText(LoginActivity.studentinfo.getStudent_department());
+
         if(ContestApplyActivity.str.equals("수학하는 신체")) {
             book.setImageResource(R.drawable.abook);
             bookTitle.setText("수학하는 신체");
-            number.setText("10034u53o35");
-            stuNumber.setText("1010100034");
-            name.setText("김옥분");
-            major.setText("경영학과");
         }
         else if(ContestApplyActivity.str.equals("국가란 무엇인가")){
             book.setImageResource(R.drawable.bbook);
             bookTitle.setText("국가란 무엇인가");
-            number.setText("10034u53o35");
-            stuNumber.setText("1010100034");
-            name.setText("김옥분");
-            major.setText("경영학과");
         }
         else{
             book.setImageResource(R.mipmap.ic_launcher);
             bookTitle.setText("");
-            number.setText("");
-            stuNumber.setText("");
-            name.setText("");
-            major.setText("");
         }
         //////////////////////////////////////////////
 
@@ -100,10 +94,6 @@ public class ContestQueryActivity extends AppCompatActivity {
                         //////////서버에서 취소 쿼리를 날리면 되요
                         book.setImageResource(R.mipmap.ic_launcher);
                         bookTitle.setText("");
-                        number.setText("");
-                        stuNumber.setText("");
-                        name.setText("");
-                        major.setText("");
                         ContestApplyActivity.str = "";
                         //////////////////////
                         finish();
