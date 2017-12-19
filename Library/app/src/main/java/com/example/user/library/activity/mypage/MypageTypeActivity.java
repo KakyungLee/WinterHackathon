@@ -64,7 +64,12 @@ public class MypageTypeActivity extends AppCompatActivity {
 
         mMetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(mMetrics);
+        /////////////////////////////////////
+
+
+
     }
+   
 
     private GridView.OnItemClickListener gridviewOnItemClickListener
             = new GridView.OnItemClickListener() {

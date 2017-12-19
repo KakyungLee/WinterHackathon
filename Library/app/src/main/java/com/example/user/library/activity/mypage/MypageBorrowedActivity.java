@@ -19,7 +19,7 @@ public class MypageBorrowedActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mypage_borrowed);
-        setTitle("독서경시대회 역대기록");
+        setTitle("대여 기록");
 
         MenuList = (ListView)findViewById(R.id.mypage_borrowed_listview);
         ListViewAdapter = new CustomListviewAdapter(getApplicationContext());

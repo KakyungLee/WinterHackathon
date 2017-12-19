@@ -32,6 +32,7 @@ public class LoginActivity extends Activity {
     private Button login;
     private Button moveLibrary;
     public static Student_info_dto studentinfo=null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

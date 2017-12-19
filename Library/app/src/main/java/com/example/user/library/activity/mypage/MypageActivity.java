@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.widget.TextView;
 
 import com.example.user.library.R;
+import com.example.user.library.activity.LoginActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,9 +35,9 @@ public class MypageActivity extends Activity {
         name = (TextView)findViewById(R.id.mypage_name);
 
         /// 서버에서 데이터를 받아서 설정하는 곳
-        major.setText("경영학과");
-        studentNumber.setText("15010958");
-        name.setText("김옥분");
+        major.setText(LoginActivity.studentinfo.getStudent_department());
+        studentNumber.setText(LoginActivity.studentinfo.getStudnet_num());
+        name.setText(LoginActivity.studentinfo.getStudnet_name());
         ////
 
         LinearLayoutManager llm = new LinearLayoutManager(this);
