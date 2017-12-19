@@ -31,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:scaleType="fitXY"
-            android:src="@drawable/Search_icon"
+            android:src="@drawable/search_icon"
             android:layout_weight="6"
             android:layout_gravity="center_vertical"
             android:backgroundTint="@color/colorPrimary"/>
