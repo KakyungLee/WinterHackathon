@@ -21,7 +21,7 @@ def get_item(soup, url):
 
         j = i.findAll('div', {'class': 'body'})[0]
         aa = j.findAll('a', {'class': 'title'})
-        pp = j.findAll('p', {'class': 'tag'})[0]
+        pp = j.findAll('p', {'class': 'tag'})
         
         tmp = "goDetail("
         a = str(aa[0])
@@ -49,18 +49,22 @@ def get_item(soup, url):
         x = a.find(tmp)
         dic['BOOK_INFO'] = a[:x].strip()[2:]
 
-        a = str(pp)
-        tmp = "</a>"
-        x = a.find(tmp)
-        a = a[x+len(tmp):]
-        tmp = "<br/>"
-        x = a.find(tmp)
-        a = a[:x]
-        tmp = "]"
-        x = a.find(tmp)
-        dic['BOOK_CODE'] = a[:x].strip()[1:]
-        a = a[x+1:]
-        dic['BOOK_STATUS'] = a.strip()
+        if len(list(pp)) == 0:
+            dic['BOOK_CODE'] = 'None'
+            dic['BOOK_STATUS'] = 'None'
+        else:
+            a = str(pp[0])
+            tmp = "</a>"
+            x = a.find(tmp)
+            a = a[x+len(tmp):]
+            tmp = "<br/>"
+            x = a.find(tmp)
+            a = a[:x]
+            tmp = "]"
+            x = a.find(tmp)
+            dic['BOOK_CODE'] = a[:x].strip()[1:]
+            a = a[x+1:]
+            dic['BOOK_STATUS'] = a.strip()
 
 
         a = str(i.findAll('img')[0])
