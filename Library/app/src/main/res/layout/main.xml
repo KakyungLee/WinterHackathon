@@ -3,22 +3,32 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/b1"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="스터디룸"/>
+        android:orientation="horizontal"
+        android:paddingBottom="3dp">
 
-    <Button
-        android:id="@+id/b2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="독서경시대회"/>
+        <EditText
+            android:id="@+id/main_search_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="도서를 입력하세요"
+            android:layout_weight="1"/>
 
-    <Button
-        android:id="@+id/b3"
-        android:layout_width="match_parent"
+        <Button
+            android:id="@+id/main_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="검색"
+            android:layout_weight="6"/>
+    </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
         android:layout_height="wrap_content"
-        android:text="나의 발자취"/>
+        android:layout_width="match_parent"
+        android:id="@+id/rv">
+    </android.support.v7.widget.RecyclerView>
 
 </LinearLayout>

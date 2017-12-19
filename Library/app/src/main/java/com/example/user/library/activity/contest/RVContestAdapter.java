@@ -1,4 +1,4 @@
-package com.example.user.library.activity.mypage;
+package com.example.user.library.activity.contest;
 
 import android.content.Context;
 import android.content.Intent;
@@ -15,7 +15,7 @@ import com.example.user.library.activity.main.Menu;
 
 import java.util.List;
 
-public class RVMypageAdapter extends RecyclerView.Adapter<RVMypageAdapter.MenuViewHolder> {
+public class RVContestAdapter extends RecyclerView.Adapter<RVContestAdapter.MenuViewHolder> {
 
     public class MenuViewHolder extends RecyclerView.ViewHolder {
 
@@ -38,13 +38,13 @@ public class RVMypageAdapter extends RecyclerView.Adapter<RVMypageAdapter.MenuVi
                     Intent intent;
                     switch(position){
                         case 0:
-                            startBorrowing();
+                            startApply();
                             break;
                         case 1:
-                            startType();
+                            startHistory();
                             break;
                         case 2:
-                            startBorrowed();
+                            startQuery();
                             break;
                     }
                 }
@@ -53,16 +53,16 @@ public class RVMypageAdapter extends RecyclerView.Adapter<RVMypageAdapter.MenuVi
 
         }
 
-        public void startBorrowing(){
-            Intent intent = new Intent(mcontext, MypageBorrowingAcitvity.class);
+        public void startApply(){
+            Intent intent = new Intent(mcontext, ContestApplyActivity.class);
             mcontext.startActivity(intent);
         }
-        public void startType(){
-            Intent intent = new Intent(mcontext, MypageTypeActivity.class);
+        public void startHistory(){
+            Intent intent = new Intent(mcontext, ContestHistoryActivity.class);
             mcontext.startActivity(intent);
         }
-        public void startBorrowed(){
-            Intent intent = new Intent(mcontext, MypageBorrowedActivity.class);
+        public void startQuery(){
+            Intent intent = new Intent(mcontext, ContestQueryActivity.class);
             mcontext.startActivity(intent);
         }
 
@@ -71,7 +71,7 @@ public class RVMypageAdapter extends RecyclerView.Adapter<RVMypageAdapter.MenuVi
     Context context;
     List<Menu> menus;
 
-    public RVMypageAdapter(Context context, List<Menu> menus){
+    public RVContestAdapter(Context context, List<Menu> menus){
         this.context = context;
         this.menus = menus;
     }

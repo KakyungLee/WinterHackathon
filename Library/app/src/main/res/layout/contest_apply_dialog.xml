@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="300dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="예약 완료"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:textColor="@color/colorAccent"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="접수 조회를 통해서\n고유번호를 확인해주세요!"
+        android:gravity="center"
+        android:textSize="15dp"/>
+
+        <Button
+            android:id="@+id/contest_apply_dialog_ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ok"
+            android:textSize="15dp"/>
+
+</LinearLayout>

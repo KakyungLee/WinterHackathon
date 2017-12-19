@@ -21,6 +21,11 @@
         <activity android:name=".activity.studyroom.StudyroomActivity" />
         <activity android:name=".activity.contest.ContestActivity" />
         <activity android:name=".activity.mypage.MypageBorrowedActivity" />
+        <activity android:name=".activity.mypage.MypageTypeActivity" />
+        <activity android:name=".activity.mypage.MypageBorrowingAcitvity" />
+        <activity android:name=".activity.contest.ContestApplyActivity" />
+        <activity android:name=".activity.contest.ContestHistoryActivity" />
+        <activity android:name=".activity.contest.ContestQueryActivity" />
     </application>
 
 </manifest>

@@ -3,22 +3,22 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/b7"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="신청"/>
+        android:orientation="vertical"
+        android:background="@color/colorPrimaryDark">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="책 읽는 세종\n독서경시대회" />
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/b8"
-        android:layout_width="match_parent"
+    <android.support.v7.widget.RecyclerView
         android:layout_height="wrap_content"
-        android:text="조회"/>
-
-    <Button
-        android:id="@+id/b9"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="역대 기록"/>
+        android:id="@+id/rv">
+    </android.support.v7.widget.RecyclerView>
 
 </LinearLayout>

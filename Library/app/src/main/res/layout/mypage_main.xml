@@ -3,22 +3,36 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/b4"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="대출 및 예약 현황"/>
+        android:orientation="vertical"
+        android:background="@color/colorPrimaryDark">
 
-    <Button
-        android:id="@+id/b5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="내 취향 분석"/>
+        <TextView
+            android:id="@+id/mypage_major"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="컴퓨터공학과" />
 
-    <Button
-        android:id="@+id/b6"
-        android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/mypage_student_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="00000000" />
+
+        <TextView
+            android:id="@+id/mypage_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="홍길동" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
         android:layout_height="wrap_content"
-        android:text="역대 대출 기록"/>
+        android:layout_width="match_parent"
+        android:id="@+id/rv">
+    </android.support.v7.widget.RecyclerView>
 
 </LinearLayout>

@@ -4,6 +4,10 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.user.library.R;
 
@@ -18,13 +22,28 @@ public class MainActivity extends Activity {
 
     private List<Menu> menus;
     private RecyclerView rv;
+    private EditText searchText;
+    private Button search;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.recyclerview);
+        setContentView(R.layout.main);
 
         rv=(RecyclerView)findViewById(R.id.rv);
+        searchText = (EditText)findViewById(R.id.main_search_text);
+        search = (Button)findViewById(R.id.main_search);
+
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String str = searchText.getText().toString();
+                if(str == null)
+                    return;
+                else
+                    Toast.makeText(getApplicationContext(), str+" 검색을 합니다.", Toast.LENGTH_LONG).show();
+            }
+        });
 
         LinearLayoutManager llm = new LinearLayoutManager(this);
         rv.setLayoutManager(llm);

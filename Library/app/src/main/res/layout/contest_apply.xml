@@ -1,6 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/contest_apply_abook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"/>
+
+        <ImageButton
+            android:id="@+id/contest_apply_bbook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="개인정보 동의 여부"
+            android:layout_weight="1"/>
+
+        <CheckBox
+            android:id="@+id/contest_apply_check"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"/>
+
+        </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="주의사항"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1.헌호가 만들어서 주면 넣을꺼\n2.헌호가 만들어서 주면 넣을꺼\n3.헌호가 만들어서 주면 넣을꺼\n4.헌호가 만들어서 주면 넣을꺼 \n"/>
+
+    <Button
+        android:id="@+id/contest_apply_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="신청"/>
+
+
+
+
+
 
 </LinearLayout>
