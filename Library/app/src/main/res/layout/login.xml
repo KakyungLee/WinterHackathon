@@ -1,33 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/login">
 
-    <EditText
-        android:id="@+id/login_id"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="학번" />
+        android:orientation="vertical"
+        android:background="@color/backblack"
+        android:layout_margin="10dp"
+        android:layout_centerVertical="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
 
-    <EditText
-        android:id="@+id/login_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:hint="비밀번호" />
+        <EditText
+            android:id="@+id/login_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="학번"
+            android:textColor="@color/color4"
+            android:textColorHint="@color/color4"
+            android:layout_marginTop="140dp"/>
 
-    <Button
-        android:id="@+id/login_login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="로그인" />
+        <EditText
+            android:id="@+id/login_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="비밀번호"
+            android:textColor="@color/color4"
+            android:textColorHint="@color/color4"/>
 
+        <Button
+            android:id="@+id/login_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="로그인"
+            android:textSize="16dp"
+            android:textColor="@color/color4"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/login_move_library"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="도서관 홈페이지로 이동" />
-
-</LinearLayout>
+        android:layout_height="40dp"
+        android:text="도서관 홈페이지로 이동"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorPrimary"
+        android:textSize="16dp"
+        android:textColor="@color/color4"/>
+</RelativeLayout>
