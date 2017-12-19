@@ -7,12 +7,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@color/colorPrimaryDark">
+        android:background="@color/colorPrimary">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="책 읽는 세종\n독서경시대회" />
+            android:text="책 읽는 세종\n독서경시대회"
+            android:textSize="20dp"
+            android:textColor="@color/color4"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"/>
     </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
