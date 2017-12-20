@@ -25,11 +25,11 @@ import org.eazegraph.lib.models.ValueLineSeries;
 
 public class MypageTypeActivity extends AppCompatActivity {
 
-    private Integer[] mThumbIds = { R.drawable.image_contest,
-            R.drawable.image_contest, R.drawable.image_contest,
-            R.drawable.image_contest, R.drawable.image_contest,
-            R.drawable.image_contest, R.drawable.image_contest,
-            R.drawable.image_contest, R.drawable.image_contest
+    private Integer[] mThumbIds = { R.drawable.f1,
+            R.drawable.f2, R.drawable.f3,
+            R.drawable.f4, R.drawable.f5,
+            R.drawable.f6, R.drawable.f7,
+            R.drawable.f8, R.drawable.f9
     };
     DisplayMetrics mMetrics;
 
@@ -69,7 +69,7 @@ public class MypageTypeActivity extends AppCompatActivity {
 
 
     }
-   
+
 
     private GridView.OnItemClickListener gridviewOnItemClickListener
             = new GridView.OnItemClickListener() {

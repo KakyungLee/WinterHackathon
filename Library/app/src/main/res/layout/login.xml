@@ -24,7 +24,7 @@
             android:text="15010973"
             android:textColor="@color/color4"
             android:textColorHint="@color/color4"
-            android:layout_marginTop="140dp"/>
+            android:layout_marginTop="30dp"/>
 
         <EditText
             android:id="@+id/login_password"

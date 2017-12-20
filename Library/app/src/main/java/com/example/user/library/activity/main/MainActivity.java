@@ -11,9 +11,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.user.library.R;
-import com.example.user.library.activity.dto.Book_dto;
 import com.example.user.library.activity.dto.Book_search_list_dto;
-import com.example.user.library.activity.dto.Student_info_dto;
 import com.example.user.library.activity.serviceinterface.BookSearch;
 import com.example.user.library.activity.util.ServiceCrawlingRetrofit;
 
@@ -59,9 +57,9 @@ public class MainActivity extends Activity {
                 startActivity(intent);
 
 */
-               // BookSearch search= ServiceCrawlingRetrofit.getInstance().getRetrofit().create(BookSearch.class);
-              //      Call<Book_search_list_dto> call =search.bookSearch(str);
-              //      new BookSearchProcess().execute(call);
+                BookSearch search= ServiceCrawlingRetrofit.getInstance().getRetrofit().create(BookSearch.class);
+                    Call<Book_search_list_dto> call =search.bookSearch(str);
+                    new BookSearchProcess().execute(call);
 
                 }
             }
@@ -99,10 +97,7 @@ public class MainActivity extends Activity {
             return null;
         }
         protected void onPostExecute(Book_search_list_dto result) {
-            System.out.println(result.max_page+"."+result.next+","+result.word+","+result.data.size());
-            for(Book_dto temp : result.data){
-                System.out.println(temp.getBook_name());
-            }
+           System.out.println(result.data.get(0).getBook_num());
         }
     }
 

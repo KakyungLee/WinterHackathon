@@ -1,12 +1,15 @@
 package com.example.user.library.activity.dto;
 
 public class Book_dto {
-	private int book_num;
 	private String book_name;
-	private String book_info;
-	private String book_code;
 	private String book_status;
+
+	private int book_num;
+	private String book_code;
+
 	private String book_imgurl;
+	private String book_info;
+
 	public int getBook_num() {
 		return book_num;
 	}

@@ -3,6 +3,7 @@ package com.example.user.library.activity.mypage;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.ListView;
 
 import com.example.user.library.R;
@@ -10,8 +11,6 @@ import com.example.user.library.activity.CustomListviewAdapter;
 import com.example.user.library.activity.LoginActivity;
 import com.example.user.library.activity.dto.Book_borrowing_join_dto;
 import com.example.user.library.activity.dto.Book_borrowing_join_list;
-import com.example.user.library.activity.dto.Book_dto;
-import com.example.user.library.activity.dto.Book_search_list_dto;
 import com.example.user.library.activity.serviceinterface.BookBorrowing;
 import com.example.user.library.activity.util.ServiceRetrofit;
 
@@ -47,6 +46,7 @@ public class MypageBorrowedActivity extends AppCompatActivity {
 */
         BookBorrowing borrowing= ServiceRetrofit.getInstance().getRetrofit().create(BookBorrowing.class);
         Call<Book_borrowing_join_list> call=borrowing.borrowinglist(LoginActivity.studentinfo.getStudnet_num());
+        Log.d("test",borrowing.borrowinglist(LoginActivity.studentinfo.getStudnet_num()).toString());
         new BorrowedProcess().execute(call);
         /////////////////////////////////
         ///// 테스트 데이터 입니다 서버에서 데이터를 넣어주시면 되요

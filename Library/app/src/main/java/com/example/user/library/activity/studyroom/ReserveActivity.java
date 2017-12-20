@@ -66,8 +66,20 @@ public class ReserveActivity extends AppCompatActivity {
             tvlist.get(i).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    view.setBackgroundColor(0xffffffff);
-                }   
+                    view.setBackgroundColor(0xffe2e2e2);
+                    TextView tvS=(TextView) findViewById(R.id.r18);
+                    TextView tvS2=(TextView) findViewById(R.id.r19);
+                    TextView tvS3=(TextView) findViewById(R.id.r20);
+                    TextView tvS4=(TextView) findViewById(R.id.r17);
+                    TextView tvS5=(TextView) findViewById(R.id.r16);
+                    TextView tvS6=(TextView) findViewById(R.id.r15);
+                    tvS.setVisibility(View.GONE);
+                    tvS2.setVisibility(View.GONE);
+                    tvS3.setVisibility(View.GONE);
+                    tvS4.setVisibility(View.GONE);
+                    tvS5.setVisibility(View.GONE);
+                    tvS6.setVisibility(View.GONE);
+                }
             });
         }
     }

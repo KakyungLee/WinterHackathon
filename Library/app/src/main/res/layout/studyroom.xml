@@ -2629,7 +2629,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="reservation"
-                android:textSize="24dp" />
+                android:textSize="15dp"
+                android:textColor="@color/color4"
+                android:background="@color/colorPrimary"/>
 
         </LinearLayout>
 

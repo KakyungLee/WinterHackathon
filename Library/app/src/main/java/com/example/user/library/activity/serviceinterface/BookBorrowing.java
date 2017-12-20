@@ -11,7 +11,7 @@ import retrofit2.http.Path;
  */
 
 public interface BookBorrowing {
-    @GET("/mypage/query/{student_num}")
+    @GET("/libserver/service/mypage/query/{student_num}")
     Call<Book_borrowing_join_list> borrowinglist (
         @Path("student_num") String student_num
     );
